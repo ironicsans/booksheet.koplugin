@@ -1,0 +1,9 @@
+.DS_Store
+*.zip
+dist/
+# Local test screenshots.
+screenshots/
+# Phone videos carry the location they were filmed at.
+*.mov
+*.MOV
+*.mp4
