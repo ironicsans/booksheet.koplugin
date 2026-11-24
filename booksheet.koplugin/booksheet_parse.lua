@@ -91,6 +91,20 @@ function Parse.excerpt(text, max_bytes)
     return cut .. "…"
 end
 
+--- Some feeds cut their previews mid-sentence without saying so. Adds an
+-- ellipsis when the preview is only the opening of the longer article text.
+local function markCutOff(preview, body)
+    if preview == "" or #body <= #preview then return preview end
+    if preview:sub(-16):find("…", 1, true) then return preview end
+    local ending = preview:gsub("”$", ""):gsub("’$", ""):gsub("[\"']$", "")
+    if ending:find("[%.!%?]$") then return preview end
+    -- Spacing differs between the two, and some articles open with a line the
+    -- preview skips, so look for the preview's opening anywhere in the article.
+    local start = preview:gsub("%s+", ""):sub(1, 40)
+    if not body:gsub("%s+", ""):find(start, 1, true) then return preview end
+    return preview .. "…"
+end
+
 local MONTHS = { jan = 1, feb = 2, mar = 3, apr = 4, may = 5, jun = 6,
     jul = 7, aug = 8, sep = 9, oct = 10, nov = 11, dec = 12 }
 
@@ -159,7 +173,7 @@ function Parse.feed(xml, limit)
             out[#out + 1] = {
                 title = title,
                 link = Parse.decode(link),
-                summary = Parse.excerpt(summary ~= "" and summary or body, 420),
+                summary = markCutOff(Parse.excerpt(summary ~= "" and summary or body, 420), body),
                 body = Parse.wordCount(body) >= 150 and body or nil,
                 date = date,
             }

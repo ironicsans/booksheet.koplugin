@@ -1,19 +1,17 @@
 # The Booksheet
 
-A KOReader plugin that gives you a full-screen, one-page newspaper of book news, made up of the sections you choose and pulled from free sources.
+**The Booksheet** is a one-page newspaper of book news, made up of the sections and sources that you choose.
 
-- Pick **four sections**: any mix of bestseller lists by genre, **Just out**, and **Reviewed this week**.
+- Pick **four sections**: any mix of bestseller lists by genre, or see what's **Just out**, or **Reviewed this week**.
 - Page through the **top 10** in each section with **More** and **Back**.
-- Read **Book news** the way you would in an RSS reader: the newest stories first, from the sources you turn on.
-- Tap anything for details, a **QR code** to open it on your phone, or to add a book to your **Want to read** list.
+- Read **Book news** headlines from the sources you turn on.
+- Tap any book or headline for details, add a book to a **Want to read** list, or get a **QR code** to open it on your phone at your favorite online store.
 
 ![The Booksheet: four book sections above a list of book news](images/booksheet.png)
 
 ## Tested on
 
-Developed and tested on a **[Kobo model]** running **KOReader [version]**.
-
-The layout has also been checked in KOReader's desktop emulator at common screen sizes from 6 to 10.3 inches. On tall, narrow screens such as the Boox Palma, it currently leaves some empty space above the footer.
+Developed and tested on a **Kobo Clara BW**.
 
 Reports from other devices are welcome.
 
@@ -32,15 +30,21 @@ Open it from the top menu → Tools tab (wrench icon) → **The Booksheet**. You
 
 ### The page
 
-- **More** and **Back** page through a section or Book news without changing the rest of the page.
+It should be pretty self-explanatory. But just in case:
+
+- **More** and **Back** page through a single section.
 - Tap a **book** to see its details, get a QR code, or save it to Want to read.
-- Tap a **headline** to see its source and date, and get a QR code to the article. When the feed includes the article's text, you can also read it right on your e-reader.
+- Tap a **headline** to see its source, and get a QR code to the article. When the feed includes the article's text, you can also read it right on your e-reader.
 - Tap **Updated** in the bottom-left corner to update now.
 - Tap **Want to read** at the bottom to see the books you saved. They stay on your list after they leave the page.
 
+| Tapping a book | Tapping a headline |
+|:---:|:---:|
+| ![A pop-up for The Three-Body Problem with its cover, author, list rank, description, and buttons for Want to read and QR Code to Book](images/book.png) | ![A pop-up for a Lit Hub article with its source, date, opening text, and buttons for Read article and QR Code to Article](images/article.png) |
+
 ### Book news
 
-Book news is a plain feed. It shows the 20 newest stories from the past 7 days across the sources you turn on, newest first. Videos and sponsored posts are left out. Nothing else is filtered or ranked, so if two outlets cover the same story, you'll see both.
+Book news shows the 20 newest stories from the past 7 days across the sources you turn on in Settings, newest first.
 
 ### Settings
 
@@ -49,24 +53,28 @@ Tap **Settings** in the bottom-right corner:
 - **Your sections**: choose what goes in each of the four spots.
 - **Book covers**: show or hide the cover on the #1 book of each bestseller list.
 - **Text size**: small, medium or large.
-- **News sources**: The New York Times, NPR Books, Lit Hub, Book Riot, Locus, Reactor and The eBook Reader.
+- **News sources**: The New York Times, NPR Books, Lit Hub, Book Riot, Locus, Reactor and The eBook Reader. (If you have a favorite book-news source with an RSS feed and you think it should be here, let me know!)
 - **Want to read**: your saved books.
 - **Book QR codes open at**: Bookshop.org, Kobo, Amazon, Apple Books, Libby or WorldCat. For Libby, you can enter your library so the code opens a search there.
-- **Update automatically**: on open, once a day, or manually. "On open" updates when the page is at least an hour old.
+- **Update automatically**: on open, once a day, or manually. "On open" doesn't actually update if the most recent update was less than an hour ago.
+
+| Settings | Choosing a section |
+|:---:|:---:|
+| ![The Settings page, with groups for your sections, your page, your books and updates](images/settings.png) | ![The section chooser, with Just out and Reviewed this week above the bestseller lists from Apple Books](images/sections.png) |
 
 ## Where the information comes from
 
 - **Bestseller lists** and **Just out**: Apple Books.
 - **Reviewed this week**: The New York Times.
-- **Book news**: the public feeds of the sources you turn on.
+- **Book news**: the public RSS feeds of the sources you turn on.
 
-The Booksheet needs Wi-Fi to update, and the last update stays available offline. It doesn't use an account. Your settings and Want to read list stay on your device.
+The Booksheet needs Wi-Fi to update. It doesn't use an account. Everything stays on your device.
 
 The Booksheet isn't affiliated with or endorsed by any of these sources or stores.
 
 ## Credits
 
-Written by David Friedman, working with [Claude](https://claude.com/claude-code), Anthropic's AI model.
+Written by David Friedman, working with [Claude](https://claude.com/claude-code).
 
 ## License
 

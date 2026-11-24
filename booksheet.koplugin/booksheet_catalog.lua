@@ -53,7 +53,7 @@ Catalog.stores = {
 }
 
 Catalog.update_modes = {
-    { id = "open", title = "On open", note = "Checks each time you open it" },
+    { id = "open", title = "On open", note = "When you open it, at most once an hour" },
     { id = "daily", title = "Once a day", note = "Checks the first time you open it each day" },
     { id = "manual", title = "Manual only", note = "Updates only when you tap Update now" },
 }
