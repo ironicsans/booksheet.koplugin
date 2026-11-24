@@ -40,7 +40,7 @@ It should be pretty self-explanatory. But just in case:
 
 | Tapping a book | Tapping a headline |
 |:---:|:---:|
-| ![A pop-up for The Three-Body Problem with its cover, author, list rank, description, and buttons for Want to read and QR Code to Book](images/book.png) | ![A pop-up for a Lit Hub article with its source, date, opening text, and buttons for Read article and QR Code to Article](images/article.png) |
+| ![A pop-up for The Calamity Club with its cover, author, list rank, description, and buttons for Want to read and QR Code to Book](images/book.png) | ![A pop-up for a Lit Hub article with its source, date, opening text, and buttons for Read article and QR Code to Article](images/article.png) |
 
 ### Book news
 
