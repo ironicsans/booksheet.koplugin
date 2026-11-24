@@ -2,12 +2,12 @@
 
 **The Booksheet** is a one-page newspaper of book news, made up of the sections and sources that you choose.
 
+<img src="images/booksheet.png" width="536" alt="The Booksheet: four book sections above a list of book news">
+
 - Pick **four sections**: any mix of bestseller lists by genre, or see what's **Just out**, or **Reviewed this week**.
 - Page through the **top 10** in each section with **More** and **Back**.
 - Read **Book news** headlines from the sources you turn on.
 - Tap any book or headline for details, add a book to a **Want to read** list, or get a **QR code** to open it on your phone at your favorite online store.
-
-<img src="images/booksheet.png" width="536" alt="The Booksheet: four book sections above a list of book news">
 
 ## Tested on
 
